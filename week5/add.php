@@ -2,7 +2,7 @@
     session_start();
     
     if(!isset($_SESSION['name'])){
-        die("Not Logged In");
+        die("ACCESS DENIED");
     }
 
     require_once "pdo.php";
@@ -58,7 +58,7 @@
         <p>Mileage:
             <input type="text" name="mileage"/></p>
         <input type="submit" value="Add">
-        <input type="submit" name="logout" value="Logout">
+        <a href="logout.php" name="logout" value="Logout">Log OUt</a>
     </form>
 
 
